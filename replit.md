@@ -118,3 +118,4 @@ Preferred communication style: Simple, everyday language.
 - Improved button contrast and disabled states for better user experience
 - Fixed Start Quiz button visibility with explicit styling and improved contrast
 - Fixed welcome page heart icon visibility and replaced with Korean flag emoji per user request
+- Fixed Next button activation issue and radio button state management with proper array indexing and unique keys

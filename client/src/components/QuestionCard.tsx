@@ -32,6 +32,7 @@ export function QuestionCard({
   isLastQuestion,
   translations,
 }: QuestionCardProps) {
+  const currentSelectedAnswer = selectedAnswer !== undefined && selectedAnswer !== -1 ? selectedAnswer : undefined;
   return (
     <Card className="shadow-lg border border-gray-200">
       <CardContent className="p-8">
@@ -41,9 +42,9 @@ export function QuestionCard({
           </h3>
           
           <RadioGroup
-            value={selectedAnswer !== undefined ? selectedAnswer.toString() : undefined}
+            key={question.id}
+            value={currentSelectedAnswer !== undefined ? currentSelectedAnswer.toString() : undefined}
             onValueChange={(value) => {
-              console.log('Radio selection:', value);
               onAnswerSelect(parseInt(value));
             }}
             className="space-y-3"

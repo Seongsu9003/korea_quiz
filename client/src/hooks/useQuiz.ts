@@ -50,6 +50,10 @@ export function useQuiz(language: string = 'en') {
   const answerQuestion = useCallback((answerIndex: number) => {
     setState(prev => {
       const newAnswers = [...prev.answers];
+      // Ensure the array is long enough
+      while (newAnswers.length <= prev.currentQuestionIndex) {
+        newAnswers.push(-1); // Use -1 to indicate no answer selected
+      }
       newAnswers[prev.currentQuestionIndex] = answerIndex;
       return {
         ...prev,
@@ -111,7 +115,7 @@ export function useQuiz(language: string = 'en') {
   }, [randomizedQuestions.length, state.currentQuestionIndex]);
 
   const canGoNext = useMemo(() => {
-    return state.answers[state.currentQuestionIndex] !== undefined;
+    return state.answers[state.currentQuestionIndex] !== undefined && state.answers[state.currentQuestionIndex] !== -1;
   }, [state.answers, state.currentQuestionIndex]);
 
   const canGoPrevious = useMemo(() => {
