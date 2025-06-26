@@ -1,11 +1,11 @@
 {
-  "buildCommand": "vite build",
-  "outputDirectory": "dist/public",
-  "framework": "vite",
-  "routes": [
+  "buildCommand": "vite build --config build-vercel.js",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "rewrites": [
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
