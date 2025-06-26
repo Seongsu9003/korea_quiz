@@ -85,7 +85,7 @@ export default function Quiz() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       {/* Header */}
       <header className="bg-white shadow-sm border-b-2 border-[hsl(var(--korean-blue))]/10">
         <div className="max-w-4xl mx-auto px-4 py-4">
@@ -145,7 +145,12 @@ export default function Quiz() {
             <Button
               onClick={handleStartQuiz}
               size="lg"
-              className="bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white border-2 border-[hsl(var(--korean-blue))] font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+              className="bg-[hsl(217,85%,54%)] hover:bg-[hsl(217,85%,45%)] text-white border-2 border-[hsl(217,85%,54%)] font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200 opacity-100"
+              style={{
+                backgroundColor: 'hsl(217, 85%, 54%)',
+                borderColor: 'hsl(217, 85%, 54%)',
+                color: 'white'
+              }}
             >
               {t.start_quiz}
             </Button>
