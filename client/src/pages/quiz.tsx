@@ -114,8 +114,22 @@ export default function Quiz() {
         {currentScreen === 'welcome' && (
           <div className="text-center space-y-8">
             <div className="space-y-4">
-              <div className="w-32 h-32 mx-auto korean-cultural-bg rounded-full flex items-center justify-center shadow-xl float-animation">
-                <Heart className="text-white text-4xl" size={48} />
+              <div 
+                className="w-32 h-32 mx-auto rounded-full flex items-center justify-center shadow-xl float-animation"
+                style={{
+                  background: 'linear-gradient(135deg, hsl(217, 85%, 54%), hsl(258, 83%, 66%), hsl(158, 94%, 39%))',
+                  border: '3px solid white'
+                }}
+              >
+                <Heart 
+                  className="text-white drop-shadow-lg" 
+                  size={64} 
+                  fill="white" 
+                  style={{ 
+                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
+                    color: 'white'
+                  }} 
+                />
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
                 {t.welcome_title}
