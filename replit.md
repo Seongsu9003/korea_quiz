@@ -106,6 +106,7 @@ This is a full-stack web application that helps foreigners test their adaptation
 Changelog:
 - June 26, 2025. Initial setup
 - June 26, 2025. Fixed button visibility issues and radio button state management
+- June 26, 2025. Configured Vercel deployment with frontend-only build setup
 
 ## User Preferences
 
