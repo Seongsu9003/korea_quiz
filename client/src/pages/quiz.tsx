@@ -117,19 +117,11 @@ export default function Quiz() {
               <div 
                 className="w-32 h-32 mx-auto rounded-full flex items-center justify-center shadow-xl float-animation"
                 style={{
-                  background: 'linear-gradient(135deg, hsl(217, 85%, 54%), hsl(258, 83%, 66%), hsl(158, 94%, 39%))',
-                  border: '3px solid white'
+                  background: 'white',
+                  border: '3px solid #ddd'
                 }}
               >
-                <Heart 
-                  className="text-white drop-shadow-lg" 
-                  size={64} 
-                  fill="white" 
-                  style={{ 
-                    filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))',
-                    color: 'white'
-                  }} 
-                />
+                <div className="text-6xl">🇰🇷</div>
               </div>
               <h2 className="text-3xl font-bold text-gray-900">
                 {t.welcome_title}

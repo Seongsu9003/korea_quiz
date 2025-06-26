@@ -116,3 +116,5 @@ Preferred communication style: Simple, everyday language.
 - Fixed button color visibility by changing background from pure white to light gray and adding borders
 - Fixed radio button state persistence by properly handling undefined values and clearing selections between questions
 - Improved button contrast and disabled states for better user experience
+- Fixed Start Quiz button visibility with explicit styling and improved contrast
+- Fixed welcome page heart icon visibility and replaced with Korean flag emoji per user request
