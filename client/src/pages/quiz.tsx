@@ -176,7 +176,16 @@ export default function Quiz() {
             <QuestionCard
               question={quiz.currentQuestion}
               selectedAnswer={quiz.answers[quiz.currentQuestionIndex]}
-              onAnswerSelect={quiz.answerQuestion}
+              onAnswerSelect={(answerIndex) => {
+                console.log('Answer selected:', answerIndex, 'for question:', quiz.currentQuestionIndex);
+                console.log('Current answers array:', quiz.answers);
+                console.log('Can go next before:', quiz.canGoNext);
+                quiz.answerQuestion(answerIndex);
+                setTimeout(() => {
+                  console.log('Can go next after:', quiz.canGoNext);
+                  console.log('Updated answers array:', quiz.answers);
+                }, 100);
+              }}
               onNext={handleNextQuestion}
               onPrevious={quiz.previousQuestion}
               canGoNext={quiz.canGoNext}

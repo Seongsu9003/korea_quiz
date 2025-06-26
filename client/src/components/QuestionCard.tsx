@@ -41,8 +41,11 @@ export function QuestionCard({
           </h3>
           
           <RadioGroup
-            value={selectedAnswer !== undefined ? selectedAnswer.toString() : ""}
-            onValueChange={(value) => onAnswerSelect(parseInt(value))}
+            value={selectedAnswer !== undefined ? selectedAnswer.toString() : undefined}
+            onValueChange={(value) => {
+              console.log('Radio selection:', value);
+              onAnswerSelect(parseInt(value));
+            }}
             className="space-y-3"
           >
             {question.options.map((option, index) => (
@@ -80,7 +83,20 @@ export function QuestionCard({
           <Button
             onClick={onNext}
             disabled={!canGoNext}
-            className="flex items-center space-x-2 bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white border-2 border-[hsl(var(--korean-blue))] disabled:opacity-50 disabled:cursor-not-allowed"
+            className={`flex items-center space-x-2 text-white border-2 transition-all duration-200 ${
+              canGoNext 
+                ? 'bg-[hsl(217,85%,54%)] hover:bg-[hsl(217,85%,45%)] border-[hsl(217,85%,54%)] cursor-pointer' 
+                : 'bg-gray-400 border-gray-400 cursor-not-allowed opacity-60'
+            }`}
+            style={canGoNext ? {
+              backgroundColor: 'hsl(217, 85%, 54%)',
+              borderColor: 'hsl(217, 85%, 54%)',
+              color: 'white'
+            } : {
+              backgroundColor: 'hsl(0, 0%, 60%)',
+              borderColor: 'hsl(0, 0%, 60%)',
+              color: 'white'
+            }}
           >
             <span>{isLastQuestion ? translations.finish : translations.next}</span>
             <ChevronRight className="h-4 w-4" />
