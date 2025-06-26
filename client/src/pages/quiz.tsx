@@ -108,7 +108,7 @@ export default function Quiz() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 py-8">
+<main className="max-w-4xl mx-auto px-4 py-8 bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
         
         {/* Welcome Screen */}
         {currentScreen === 'welcome' && (
@@ -145,7 +145,7 @@ export default function Quiz() {
             <Button
               onClick={handleStartQuiz}
               size="lg"
-              className="bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
+              className="bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white border-2 border-[hsl(var(--korean-blue))] font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-200"
             >
               {t.start_quiz}
             </Button>

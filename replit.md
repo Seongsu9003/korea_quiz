@@ -105,7 +105,14 @@ This is a full-stack web application that helps foreigners test their adaptation
 
 Changelog:
 - June 26, 2025. Initial setup
+- June 26, 2025. Fixed button visibility issues and radio button state management
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+
+## Recent Fixes
+
+- Fixed button color visibility by changing background from pure white to light gray and adding borders
+- Fixed radio button state persistence by properly handling undefined values and clearing selections between questions
+- Improved button contrast and disabled states for better user experience

@@ -41,7 +41,7 @@ export function QuestionCard({
           </h3>
           
           <RadioGroup
-            value={selectedAnswer?.toString()}
+            value={selectedAnswer !== undefined ? selectedAnswer.toString() : ""}
             onValueChange={(value) => onAnswerSelect(parseInt(value))}
             className="space-y-3"
           >
@@ -80,7 +80,7 @@ export function QuestionCard({
           <Button
             onClick={onNext}
             disabled={!canGoNext}
-            className="flex items-center space-x-2 bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white"
+            className="flex items-center space-x-2 bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white border-2 border-[hsl(var(--korean-blue))] disabled:opacity-50 disabled:cursor-not-allowed"
           >
             <span>{isLastQuestion ? translations.finish : translations.next}</span>
             <ChevronRight className="h-4 w-4" />

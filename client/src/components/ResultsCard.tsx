@@ -138,7 +138,7 @@ export function ResultsCard({ results, onRetake, onShare, translations }: Result
         
         <Button
           onClick={onShare}
-          className="flex items-center space-x-2 bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white"
+          className="flex items-center space-x-2 bg-[hsl(var(--korean-blue))] hover:bg-[hsl(217,85%,45%)] text-white border-2 border-[hsl(var(--korean-blue))]"
         >
           <Share2 className="h-4 w-4" />
           <span>{translations.share_results}</span>

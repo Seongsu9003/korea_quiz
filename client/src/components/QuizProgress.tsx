@@ -23,11 +23,7 @@ export function QuizProgress({ current, total, percentage, progressText }: QuizP
           background: 'hsl(210, 13%, 88%)'
         }}
       />
-      <style jsx>{`
-        .progress-indicator {
-          background: linear-gradient(to right, hsl(var(--korean-blue)), hsl(var(--korean-violet)));
-        }
-      `}</style>
+
     </div>
   );
 }
